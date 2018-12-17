@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service User {
+    // 获取用户信息
+    rpc GetUserInfo (GetUserInfoReq) returns (GetUserInfoRsp);
+}
+
+message GetUserInfoReq {
+    int64 userID = 1;
+}
+
+message GetUserInfoRsp {
+    int64 userID = 1;
+    string username = 2;
+    string name = 3;
+}
