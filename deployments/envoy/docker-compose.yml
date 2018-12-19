@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  envoy:
+    build: .
+    ports:
+      - 8081:8081
+    restart: always

@@ -14,12 +14,15 @@ const (
 	port = ":9090"
 )
 
-type UserServer struct {}
+type UserServer struct{}
 
-func (s *UserServer) GetUserInfo(ctx context.Context, in *pb.GetUserInfoReq) (out *pb.GetUserInfoRsp,err error) {
+func (s *UserServer) GetUserInfo(ctx context.Context, in *pb.GetUserInfoReq) (out *pb.GetUserInfoRsp, err error) {
+	log.Println("GetUserInfo receive request")
+	out = new(pb.GetUserInfoRsp)
 	out.UserID = 100
 	out.Username = "adevjoe"
 	out.Name = "joe"
+	log.Println("GetUserInfo response", out)
 	return
 }
 

@@ -1,18 +1,16 @@
 # grpc-web-demo
 
-grpc web 示例
+grpc web example for go and vue
 
-项目结构:
-```
-├── Makefile
-├── README.md
-├── api
-├── cmd
-├── deployments
-├── go.mod
-├── go.sum
-├── lib
-├── pkg
-└── web
+### Quick Start
 
+```shell
+# start server
+$ make server
+
+# start envoy proxy
+$ make envoy
+
+# start client
+$ make client
 ```
